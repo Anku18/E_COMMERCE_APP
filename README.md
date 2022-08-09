@@ -1,6 +1,5 @@
 # E_COMMERCE_APP
 
-# E_Commerce_app
 
 A new Flutter project.
 
