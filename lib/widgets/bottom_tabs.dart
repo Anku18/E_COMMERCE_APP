@@ -18,20 +18,21 @@ class _BottomTabState extends State<BottomTab> {
     _selectedTab = widget.selectedTab ?? 0;
     return Container(
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(12.0),
-            topRight: Radius.circular(
-              12.0,
-            ),
+        color: Colors.white,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(12.0),
+          topRight: Radius.circular(
+            12.0,
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.15),
-              spreadRadius: 1.0,
-              blurRadius: 10.0,
-            ),
-          ]),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            spreadRadius: 1.0,
+            blurRadius: 10.0,
+          ),
+        ],
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/services/firebase_services.dart';
 import 'package:e_commerce_app/tabs/home_tab.dart';
 import 'package:e_commerce_app/tabs/saved_tab.dart';
 import 'package:e_commerce_app/tabs/search_tab.dart';
