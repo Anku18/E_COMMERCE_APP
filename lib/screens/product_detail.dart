@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 class ProductPage extends StatefulWidget {
   static const routeName = '/products-detail';
 
+  const ProductPage({Key? key}) : super(key: key);
+
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
@@ -95,7 +97,7 @@ class _ProductPageState extends State<ProductPage> {
                           '\$${documentData['price']}',
                           style: TextStyle(
                             fontSize: 18,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
@@ -128,7 +130,7 @@ class _ProductPageState extends State<ProductPage> {
                           _selectedProductSize = size;
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 100,
                       ),
                       Padding(
@@ -139,7 +141,8 @@ class _ProductPageState extends State<ProductPage> {
                             GestureDetector(
                               onTap: () {
                                 _addToSaved(productId);
-                                Scaffold.of(context).showSnackBar(_snackBar1);
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(_snackBar1);
                               },
                               child: Container(
                                 height: 55.0,
@@ -160,7 +163,8 @@ class _ProductPageState extends State<ProductPage> {
                               child: GestureDetector(
                                 onTap: () {
                                   _addCart(productId);
-                                  Scaffold.of(context).showSnackBar(_snackBar);
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(_snackBar);
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(left: 30),

@@ -7,6 +7,8 @@ import '../widgets/custom_input.dart';
 
 class ResgisterPage extends StatefulWidget {
   static const routeName = '/registerpage';
+
+  const ResgisterPage({Key? key}) : super(key: key);
   @override
   State<ResgisterPage> createState() => _ResgisterPageState();
 }
@@ -24,7 +26,7 @@ class _ResgisterPageState extends State<ResgisterPage> {
             child: Text(error),
           ),
           actions: [
-            FlatButton(
+            TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -101,7 +103,7 @@ class _ResgisterPageState extends State<ResgisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -165,6 +167,5 @@ class _ResgisterPageState extends State<ResgisterPage> {
         ),
       ),
     );
-    ;
   }
 }
